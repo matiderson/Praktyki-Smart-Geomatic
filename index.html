@@ -1,0 +1,126 @@
+<!doctype html>
+
+<html lang="en">
+  <!--Icons made by Freepik from www.flaticon.com-->
+  <head>
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Punkty gastronomiczne w Tychach</title>
+
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <script type="text/javascript" src="https://support.smartgeomatic.eu/static/sdk/v0.0.5/opal-sdk.umd.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.13.1/mapbox-gl.css" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navigationButtons.css">
+    <link rel="stylesheet" href="css/legend.css">
+  </head>
+
+  <body>
+    <div class="navigationButtonsContainer">
+      <button class="navigationButton navTooltip" id="homePosition">
+        <img src="icons/home.png">
+        <div class="left">
+          <span>Powrót do pozycji początkowej</span>
+          <i></i>
+        </div>
+       </button>
+       <button class="navigationButton navTooltip" id="zoomIn">
+        <img src="icons/zoomin.png">
+        <div class="left"> 
+          <span>Przybliż mapę</span>
+          <i></i>
+        </div>
+       </button>
+       <button class="navigationButton navTooltip" id="zoomOut">
+        <img src="icons/zoomout.png">
+        <div class="left">
+          <span class="tooltipText">Oddal mapę</span>
+          <i></i>
+        </div>
+       </button>
+       <button class="navigationButton navTooltip" id="homeBearing">
+        <img src="icons/bearing.png">
+        <div class="left">
+          <span class="tooltipText">Powrót do orientacji początkowej</span>
+          <i></i>
+        </div>
+       </button>
+    </div>
+    <div class="legendButtonContainer legendTooltip" >
+      <button class="legendButton" id="legendButton">
+        <img src="icons/info.png">
+      </button>
+      <div class="right">
+        <span id="legendText">Pokaż legendę</span>
+        <i></i>
+      </div>
+    </div>
+    <div class="legend">
+      <div class="legendContainer">
+        <header class="legendHeader">
+          Punkty gastronomiczne w Tychach
+        </header>
+        <div class="legendList">
+          <ul>
+            <li>
+              <button class="menuButton" id="restauracja" value="1">
+                <img src="icons/restauracja.png">
+              </button>
+              <span id="restauracjaSpan">Restauracje</span>
+            </li>
+            <li>
+              <button class="menuButton" id="fastfood" value="1">
+                <img src="icons/fastfood.png">
+              </button>
+              <span id="fastfoodSpan">Fast Food</span>
+            </li>
+            <li>
+              <button class="menuButton" id="kawiarnia" value="1">
+                <img src="icons/kawiarnia.png">
+              </button>
+              <span id="kawiarniaSpan">Kawiarnia</span>
+            </li>
+            <li>
+              <button class="menuButton" id="pizza" value="1">
+                <img src="icons/pizza.png">
+              </button>
+              <span id="pizzaSpan">Pizzeria</span>
+            </li>
+            <li>
+              <button class="menuButton" id="kebab" value="1">
+                <img src="icons/kebab.png">
+              </button>
+              <span id="kebabSpan">Kebab</span>
+            </li>
+            <li>
+              <button class="menuButton" id="wloska" value="1">
+                <img src="icons/wloska.png">
+              </button>
+              <span id="wloskaSpan">Kuchnia włoska</span>
+            </li>
+            <li>
+              <button class="menuButton" id="orientalna" value="1">
+                <img src="icons/orientalna.png">
+              </button>
+              <span id="orientalnaSpan">Kuchnia orientalna</span>
+            </li>
+            <li>
+              <button class="menuButton" id="nalesniki" value="1">
+                <img src="icons/nalesniki.png">
+              </button>
+              <span id="nalesnikiSpan">Naleśnikarnia</span>
+            </li>
+            <li>
+              <button class="menuButton" id="pierogi" value="1">
+                <img src="icons/pierogi.png">
+              </button>
+              <span id="pierogiSpan">Pierogarnia</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="map" />
+    <script src="js/index.js"></script>
+  </body>
+</html>

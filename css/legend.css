@@ -1,0 +1,177 @@
+.legendButtonContainer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 48px;
+    height: 48px;
+    z-index: 100;
+}
+
+.legendButton {
+    cursor: pointer;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    opacity: 0.8;
+    background-color: aliceblue;
+    border-color: aliceblue;
+}
+
+.legendButton img {
+    position: absolute;
+    width: 32px;
+    top: 50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.legendTooltip {
+    display:inline-block;
+    position:relative;
+    border-bottom:1px dotted #666;
+    text-align:left;
+    white-space:nowrap;
+    max-width:none;
+}
+
+.legendTooltip .right {
+    min-width:10px; 
+    top:50%;
+    left:100%;
+    margin-left:20px;
+    transform:translate(0, -50%);
+    padding:7px 20px;
+    color:#FFFFFF;
+    background-color:#444444;
+    font-weight:normal;
+    font-size:13px;
+    border-radius:8px;
+    position:absolute;
+    z-index:100;
+    box-sizing:border-box;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+    visibility:hidden; 
+    opacity:0; 
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+
+.legendTooltip:hover .right {
+    visibility:visible; 
+    opacity:0.8;
+    transition: opacity 0.8s linear;
+}
+
+.legendTooltip .right i {
+    position:absolute;
+    top:50%;
+    right:100%;
+    margin-top:-10px;
+    width:10px;
+    height:20px;
+    overflow:hidden;
+}
+
+.legendTooltip .right i::after {
+    content:'';
+    position:absolute;
+    width:10px;
+    height:10px;
+    left:0;
+    top:50%;
+    transform:translate(50%,-50%) rotate(-45deg);
+    background-color:#444444;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+}
+.legend {
+    position: absolute;
+    width: 250px;
+    left: 35px;
+    top: 50px;
+    z-index: 50;
+    border-radius: 8px;
+    background-color:dodgerblue;
+    height: 0px;
+    max-height: 80%;
+    transform-origin: top left;
+    opacity: 0.8;
+    transition: 0.5s ease-in;
+    color:aliceblue;
+}
+
+.legendContainer {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.legendHeader {
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 110%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.legendList {
+    overflow-y: auto;
+    scrollbar-color: transparent transparent/*cornflowerblue beige*/;
+}
+
+.legendList ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    margin-top: -5px;
+}
+
+.legendList li {
+    margin: 5px 0 0 0;
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.legendList button {
+    width: 30px;
+    height: 30px;
+    margin-top: 18px;
+    margin-left: 2px;
+    margin-right: 10px;
+    background-color: transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+.legendList img {
+    position: relative;
+    width: 30px;
+    top: 50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.legendList li span {
+    padding-top: 9%;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/*hide scrollbar in chrome*/
+.legendList::-webkit-scrollbar {
+    display: none;
+}
